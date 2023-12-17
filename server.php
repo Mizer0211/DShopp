@@ -70,6 +70,8 @@ if (isset($_POST['reg_user'])) {
   	header('location: Profile.php');
   }
 }
+
+
  // User login
 if (isset($_POST['login_user'])) {
     $username = mysqli_real_escape_string($db, $_POST['username']);
@@ -86,8 +88,10 @@ if (isset($_POST['login_user'])) {
         $password = md5($password);
         $query = "SELECT * FROM users WHERE user_name='$username' AND password='$password'";
         $results = mysqli_query($db, $query);
+        $new = mysqli_fetch_row($results);
         if (mysqli_num_rows($results) == 1) {
           $_SESSION['username'] = $username;
+          $_SESSION['email'] = $new[2];
           $_SESSION['is_admin'] = $admin;
           $_SESSION['success'] = "You are now logged in";
           header('location: Profile.php');

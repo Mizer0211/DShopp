@@ -94,11 +94,7 @@ if (!$conn) {
                                     </button>
 
                                 </div>
-                                <?php
-                                foreach ($results as $id=>$result) {
-                                echo '<button class="logout-btn" type="button"><a href="EditProfile.php? id='.$result['user_id'].'">Edit</a></button>';
-                                } 
-                                ?>
+
                             </div>
                         </div>
 
