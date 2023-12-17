@@ -6,7 +6,7 @@
 
 body {
     background-color: #fdd08b;
-    background-image: url(../foto/Background/Background.svg);
+    background-image: url(../foto/background/Background.svg);
     background-repeat: no-repeat;
     background-size: 100%;
     margin: 0;
@@ -194,10 +194,6 @@ h1, h3 {
     filter: drop-shadow(0px 2px 1px black);
 }
 
-.sumbit-div:hover {
-    transform: scale(110%);
-    transition: 0.4s;
-}
 
 .sumbit-button:hover {
     transition: 0.4s;

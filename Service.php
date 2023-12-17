@@ -1,5 +1,6 @@
 <?php include('server.php');
 
+// connect to the database
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -51,16 +52,16 @@ mysqli_close($conn);
                     <div class="person-data">
                         <div class="person-name">
                             <label class="person-data-label">Vards :</label>
-                            <input class="person-data-input" type="text" placeholder=" ">
+                            <input class="person-data-input" name="user_name" type="text">
                         </div>
                         <div class="person-email">
                             <label class="person-data-label">Email :</label>
-                            <input class="person-data-input" type="text" placeholder=" ">
+                            <input class="person-data-input" name="user_email" type="text">
                         </div>
                     </div>
                     <div class="dropdown">
                         <p>Lūdzu, norādiet ar kādu tipu ierīci saistīta jūsu problēma :</p>
-                        <input class="choice-input" list="choice" name="myBrowser" placeholder="Izvēle"/>
+                        <input class="choice-input" list="choice" name="product_category" placeholder="Izvēle"/>
                         <datalist id="choice">
                           <option id="choice-atb" value="Datoru">
                           <option value="Monitoru">
@@ -71,11 +72,11 @@ mysqli_close($conn);
                 </div>
                 <div class="write-about">
                     <h3 class="write-about-text">Please, write about your problem :</h3>
-                    <textarea type="text" class="about-problem" placeholder="..."></textarea>
+                    <textarea type="text" class="about-problem" name="problem_description" placeholder="..."></textarea>
                 </div>
                 <div class="sumbit-div-content">
                     <div class="sumbit-div">
-                        <button type="submit" class="btn" name="add_product">Sūtīt</button>
+                        <button type="submit" class="btn" name="send_request">Sent Request</button>
                     </div>
                 </div>
             </div>
