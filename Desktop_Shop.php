@@ -40,9 +40,9 @@
         </header>
         <div class="lgse">
             <div class="searchdiv">
-                <input class="search-input" type="text" placeholder="Search" name="search">
+                <input class="search-input" type="text" placeholder="Meklēt..." name="search">
                 <div class="sumbit_div">
-                    <input class="submit-input" type="submit" name="submit" value="Search">
+                    <input class="submit-input" type="submit" name="submit" value="Meklēt">
                 </div>
             </div>
         </div>

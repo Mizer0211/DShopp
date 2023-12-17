@@ -53,8 +53,8 @@ mysqli_close($conn);
 
         <div class="searchdiv">
             <form method="post">
-                <input type="text" name="search" class="search-input" placeholder="Search">
-                <input class="submit-button" type="submit" name="submit" value="Search">
+                <input type="text" name="search" class="search-input" placeholder="Meklēt...">
+                <input class="submit-button" type="submit" name="submit" value="Meklēt">
             </form>
         </div>
     </div>
