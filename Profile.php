@@ -71,7 +71,7 @@ if (!$conn) {
                     <?php endif ?>
                 </div>
                 <div class="title">
-                    <h1>Your Profile</h1>
+                    <h1>Jūsu Profils</h1>
                 </div>
                 <div class="user-info-container">
                     <div class="user-info">
@@ -79,7 +79,7 @@ if (!$conn) {
                             <img class="profile-logo" src="foto/user-logo-test.jpeg" alt="Avatar">
                         </div>
                         <div class="user-info-text">
-                            <p>Name : <?php echo $_SESSION['username']; ?></p>
+                            <p>Vārds : <?php echo $_SESSION['username']; ?></p>
                             <p>Email : <?php echo $_SESSION['email']; ?></p>
                             <?php if(isset($_SESSION['is_admin']) && $_SESSION['is_admin'] == 1) { 
                                 echo '';
@@ -87,10 +87,10 @@ if (!$conn) {
                             <div class="btnchoicer">
                                 <div class="changepasswordbtn">
                                     <button class="change-password" type="button">
-                                        <a href="#">Change password</a>
+                                        <a href="#">Mainīt paroli</a>
                                     </button>
                                     <button class="change-user-info" type="button">
-                                        <a href="EditProfile.php">Edit Profile Data</a>
+                                        <a href="EditProfile.php">Rediģēt profila datus</a>
                                     </button>
 
                                 </div>

@@ -71,12 +71,12 @@ mysqli_close($conn);
                     </div>
                 </div>
                 <div class="write-about">
-                    <h3 class="write-about-text">Please, write about your problem :</h3>
+                    <h3 class="write-about-text">Lūdzu, aprakstiet savu problēmu : </h3>
                     <textarea type="text" class="about-problem" name="problem_description" placeholder="..."></textarea>
                 </div>
                 <div class="sumbit-div-content">
                     <div class="sumbit-div">
-                        <button type="submit" class="btn" name="send_request">Sent Request</button>
+                        <button type="submit" class="btn" name="send_request">Nosūtīt pieprasījumu</button>
                     </div>
                 </div>
             </div>

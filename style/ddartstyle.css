@@ -150,15 +150,16 @@ body {
 }
 
 .add-item-to-cart {
-    background-color: #fdd08b;
+    background-color: #0f1c3b;
     height: min-content;
     padding: 8px;
     border-radius: 5px;
+    color :#fdd08b;
 }
 
 .add-item-to-cart > a {
     text-decoration: none;
-    color: #0f1c3b;
+    color: #ffa723fa;
     transition: 0.3s;
 }
 

@@ -25,10 +25,10 @@
                                 <button class="dropbtn">
                                     <img src="foto/user-logo-test.jpeg" class="dropdown-image">
                                     <div class="dropdown-content">
-                                        <a href="Profile.php">Profile</a>
+                                        <a href="Profile.php">Profils</a>
                                         <a href="Cart.php">Groza</a>
                                         <?php  if (isset($_SESSION['username'])) : ?>
-                                            <a href="login.php?logout='1'">Logout</a>
+                                            <a href="login.php?logout='1'">Iziet</a>
                                         <?php endif ?>  
                                     </div>
                                 </button>
