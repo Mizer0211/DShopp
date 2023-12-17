@@ -1,5 +1,4 @@
 <?php include('server.php');
-// initializing variables
 
 // connect to the database
 $servername = "localhost";

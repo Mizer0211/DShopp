@@ -1,7 +1,5 @@
 <?php include('server.php');
 
-// initializing variables
-
 // connect to the database
 $servername = "localhost";
 $username = "root";
@@ -15,8 +13,8 @@ if (!$conn) {
 $sql = "SELECT * FROM product WHERE category='peles'";
 $results = mysqli_query($conn, $sql);
 
-///$sql = "DELETE FROM product WHERE product_id='$product_id'";
-
+$db = mysqli_connect('localhost', 'root', '', 'desktopshop');
+$query = mysqli_query($db, "SELECT * FROM product");
 
 mysqli_close($conn);
 
@@ -46,7 +44,7 @@ mysqli_close($conn);
     </header>
 
     <div class="lgse">
-        <a class="logobutton" href="Desktop_Shop.php"><img class="logo" src="foto/Logo/MainLogotype.png"></a>
+        <a class="logobutton" href="Desktop_Shop.php"><img class="logo" src="foto/Logo/mainlogotype.png"></a>
         <div class="location">
             <a class="locate" href="Desktop_Shop.php">DShop</a>
             <h3 class="hloc">></h3>
@@ -54,12 +52,10 @@ mysqli_close($conn);
         </div>
 
         <div class="searchdiv">
-            <input class="search-input" type="text" placeholder="Search">
-            <div class="sumbit_div">
-                <a class="sumbit_a" href="#">
-                    <image class="searchph" src="foto/atb/search.svg"></image>
-                </a>
-            </div>
+            <form method="post">
+                <input type="text" name="search" class="search-input" placeholder="Search">
+                <input class="submit-button" type="submit" name="submit" value="Search">
+            </form>
         </div>
     </div>
 
@@ -69,8 +65,8 @@ mysqli_close($conn);
             echo '
         <div class="mouse">
             <div class="mouse-header">
-                <a href="Dart.php" class="mouselink"><span class="Name">'.$result['title'].'</span></a>
-                <a href="Dart.php"><img class="mouseimg" src=""><a>
+                <a class="mouselink"><span class="Name">'.$result['title'].'</span></a>
+                <a><img class="mouseimg" src=""><a>
             </div>
 
             <div class="mousedisc">
@@ -80,11 +76,18 @@ mysqli_close($conn);
                 
                 <div class="action">
                     <a class="mouse_price">'.$result['price'].' €</a>
-                    <button class="add-product-to-cart" type="button"><a href="Cart.php">Add To Cart</a></button>
+                    <button class="show-more-about_product"><a href="Dart.php? id='.$result['product_id'].'">Show More</a></button>
                 </div>
             </div>
         </div>';
         }
+        ?>
+        <?php
+        if (isset($_POST['submit'])){
+            $search = $_POST['search'];
+            $query = mysqli_query($db, "SELECT * FROM product WHERE title LIKE '%$search%' OR specification LIKE '%$search%'");
+            while($row = mysqli_fetch_assoc($query)) echo "<h1>" .$row['title']."</h1><p>".$row['specification']."</p><br>";
+        }        
         ?>
     </div>
 </body>

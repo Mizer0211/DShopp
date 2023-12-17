@@ -6,7 +6,7 @@
 
 body {
     background-color: #fdd08b;
-    background-image: url(../foto/Background/Background.svg);
+    background-image: url(../foto/background/Background.svg);
     background-repeat: no-repeat;
     background-size: 100%;
     margin: 0;
@@ -115,7 +115,7 @@ body {
     display: flex;
     margin-left: 30.5%;
     padding-left: 5px;
-    height: 35px;
+    height: 36px;
     border-radius: 8px;
     border: 1px solid #0f1c3b;
     background-color: #fdd08b;
@@ -132,7 +132,7 @@ body {
 }
 
 .sumbit_div {
-    margin: 3px 5px 0 10px;
+    margin: 0px 5px 0 10px;
     text-align: center;
     width: 27px;
     height: 27px;
@@ -144,6 +144,12 @@ body {
 .searchph {
     width: 23px;
     height: 23px;
+}
+
+.submit-button {
+    height: 35px;   
+    border-radius: 8px;
+    border: 1px solid #0f1c3b;
 }
 
 .login {
@@ -223,6 +229,22 @@ body {
     cursor: pointer;
 }
 
+.show-more-about_product {
+    color: #0f1c3b;
+    background-color: #fdd08b;
+    border: 1px solid #0f1c3b;
+    border-radius: 5px;
+}
+
+.show-more-about_product > a {
+    color: #0f1c3b;
+    text-decoration: none;
+}
+
+.show-more-about_product > a:hover {
+    text-decoration: underline;
+}
+
 .action {
     text-align: center;
     display: flex;
@@ -235,4 +257,5 @@ body {
     display: flex;
     padding: 5px;
     justify-content: center;
+    text-align: center;
 }
