@@ -44,7 +44,7 @@ mysqli_close($conn);
     </header>
 
     <div class="lgse">
-        <a class="logobutton" href="Desktop_Shop.php"><img class="logo" src="foto/Logo/mainlogotype.png"></a>
+        <a class="logobutton" href="Desktop_Shop.php"><img class="logo" src="foto/logo/mainlogotype.png"></a>
         <div class="location">
             <a class="locate" href="Desktop_Shop.php">DShop</a>
             <h3 class="hloc">></h3>

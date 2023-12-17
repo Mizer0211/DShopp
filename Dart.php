@@ -33,7 +33,7 @@ $result = mysqli_query($db, $sql)->fetch_assoc();
             </div>
     </header>
     <div class="lgse">
-        <a class="logobutton" href="Desktop_Shop.php"><img class="logo" src="foto/Logo/MainLogotype.png"></a>
+        <a class="logobutton" href="Desktop_Shop.php"><img class="logo" src="foto/logo/MainLogotype.png"></a>
         <div class="location">
             <a class="locate" href="Desktop_Shop.php">DShop</a>
             <h3 class="hloc">></h3>
