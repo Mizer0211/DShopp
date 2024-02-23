@@ -6,7 +6,7 @@
 
 body {
     background-color: #fdd08b;
-    background-image: url(../foto/Background/Background.svg);
+    background-image: url(../foto/background/Background.svg);
     background-repeat: no-repeat;
     background-size: 100%;
     margin: 0;
@@ -37,24 +37,6 @@ body {
     transition: 0.3s;
     color: #ffa723fa;
 }
-
-.logind {
-    text-align: center;
-    align-items: flex-end;
-    word-wrap: unset;
-}
-
-.login {
-    text-decoration: none;
-    color: white;
-    cursor: pointer;
-}
-
-.login:hover {
-    transition: 0.3s;
-    color: #ffa723fa;
-}
-
 
 .flex-container {
     padding: 0;
@@ -171,13 +153,16 @@ body {
 }
 
 .sumbit_div {
-    margin: 3px 5px 0 10px;
     text-align: center;
-    width: 27px;
-    height: 27px;
-    background-color: #ffa723fa;
-    border-radius: 5px;
-    border: 1px solid #0f1c3b;
+}
+
+.submit-input {
+    height: 35px;
+    border-radius: 8px;
+    border-right: 1px;
+    border-top: 1px;
+    border-bottom: 1px;
+    border-left: 1px solid #0f1c3b;
 }
 
 .searchph {

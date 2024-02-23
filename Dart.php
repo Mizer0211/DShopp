@@ -1,4 +1,13 @@
-<?php include('server.php') ?>
+<?php include('server.php');
+
+$id=$_GET['id'];
+$sql = "SELECT * FROM product WHERE product_id='$id'";
+
+$result = mysqli_query($db, $sql)->fetch_assoc();
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,24 +15,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HyperX Pulsefire Dart mouse</title>
-    <link href="style/dartstyle.css" rel="stylesheet" type="text/css"/>
+    <link href="style/ddartstyle.css" rel="stylesheet" type="text/css"/>
     <link rel="icon" type="image/x-icon" href="/foto/icon/Icon.ico">
 </head>
 <body>
     <header>
-        <div class="navmenu">
-            <nav class="navbar">
-                <ul class="flex-container space-between"> 
-                    <li class="flex-item"><a class="navigation" href="Desktop_Shop.php">Veikals</a></li>
-                    <li class="flex-item"><a class="navigation" href="Service.php">Service</a></li>
-                    <li class="flex-item"><a class="navigation" href="Delivery.php">Piegāde</a></li>
-                    <li class="flex-item"><a class="navigation" href="Kontakti.php">Kontakti</a></li>
-                </ul>
-            </nav>
-        </div>
+    <div class="navmenu">
+                <nav class="navbar">
+                    <ul class="flex-container space-between">
+                        <li class="flex-item"><a class="navigation" href="Desktop_Shop.php">Veikals</a></li>
+                        <li class="flex-item"><a class="navigation" href="Service.php">Serviss</a></li>
+                        <li class="flex-item"><a class="navigation" href="Delivery.php">Piegade</a></li>
+                        <li class="flex-item"><a class="navigation" href="Kontakti.php">Kontakti</a></li>
+
+                    </ul>
+                </nav>
+            </div>
     </header>
     <div class="lgse">
-        <a class="logobutton" href="Desktop_Shop.php"><img class="logo" src="foto/Logo/MainLogotype.png"></a>
+        <a class="logobutton" href="Desktop_Shop.php"><img class="logo" src="foto/logo/MainLogotype.png"></a>
         <div class="location">
             <a class="locate" href="Desktop_Shop.php">DShop</a>
             <h3 class="hloc">></h3>
@@ -73,10 +83,10 @@
             </div>
             
             <div class="mouse-elements">
-                <h1>Datorpele HyperX Pulsefire Dart</h1>
-                <h5>Preces kods: 591029</h5>
+                <h1><?php echo $result['title'];?></h1>
+                <h5>Preces kods: <?php echo $result['product_id'];?></h5>
                 <div class="mouse-price">
-                    <h3>59,99 €</h3><h5>/gab.</h5>
+                    <h3><?php echo $result['price'];?> €</h3><h5>/ gab.</h5>
                     <div class="add-item-to-cart">
                         <a href="#">Ielikt grozā</a>
                     </div>
@@ -106,29 +116,37 @@
             </div>
             <div class="mouse-feature-container">
                 <div class="mouse-feature">
-                    <h2>Prēces informācija</h2>
+                    <div class="product-info-header">
+                        <h2>Prēces informācija</h2>
+                    </div>
+                        <div class="product-specification">
+                           <?php echo $result['specification'];?>
+                        </div>
                     <div class="mouse-feature-table-container">
                         <div class="first-teble-block">
                             <table class="mouse-feature-table">
-                                <tr>
-                                    <td colspan="2" class="table-header">Kopējie parametri</td> 
-                                </tr>
-                                <tr>
-                                    <td class="talbe-cell">Produkta veids</td>
-                                    <td class="talbe-cell"><a class="link-to-page" href="Mouse.php">Pele</a></td>
-                                </tr>
-                                <tr>
-                                    <td class="talbe-cell">Zīmols</td>
-                                    <td class="talbe-cell">HyperX</td>
-                                </tr>
-                                <tr>
-                                    <td class="talbe-cell">Modelis</td>
-                                    <td class="talbe-cell">Pulsefire Dart Wireless</td>
-                                </tr>
-                                <tr>
-                                    <td class="talbe-cell">Pogu skaits</td>
-                                    <td class="talbe-cell">6</td>
-                                </tr>
+                                <div>
+                                    <tr>
+                                        <td colspan="2" class="table-header">Kopējie parametri</td> 
+                                    </tr>
+                                    <tr>
+                                        <td class="talbe-cell">Produkta veids</td>
+                                        <td class="talbe-cell"><a class="link-to-page" href="Mouse.php"><?php echo $result['category'];?></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="talbe-cell">Zīmols</td>
+                                        <td class="talbe-cell">HyperX</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="talbe-cell">Modelis</td>
+                                        <td class="talbe-cell">Pulsefire Dart Wireless</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="talbe-cell">Pogu skaits</td>
+                                        <td class="talbe-cell">6</td>
+                                    </tr>
+                                </div>
+
                             </table>
                         </div>
                         <div class="block-second-tables">

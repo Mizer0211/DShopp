@@ -11,8 +11,8 @@ $category = "category";
 $specification = "specification";
 $price = "price";
 $admin = "is_admin";
-$user_name = "user_name";
-$user_email = "user_email";
+$username = "user_name";
+$useremail = "user_email";
 $productcategory = "product_category";
 $problemdescription = "problem_description";
 
@@ -70,6 +70,8 @@ if (isset($_POST['reg_user'])) {
   	header('location: Profile.php');
   }
 }
+
+
  // User login
 if (isset($_POST['login_user'])) {
     $username = mysqli_real_escape_string($db, $_POST['username']);
@@ -86,8 +88,10 @@ if (isset($_POST['login_user'])) {
         $password = md5($password);
         $query = "SELECT * FROM users WHERE user_name='$username' AND password='$password'";
         $results = mysqli_query($db, $query);
+        $new = mysqli_fetch_row($results);
         if (mysqli_num_rows($results) == 1) {
           $_SESSION['username'] = $username;
+          $_SESSION['email'] = $new[2];
           $_SESSION['is_admin'] = $admin;
           $_SESSION['success'] = "You are now logged in";
           header('location: Profile.php');
@@ -126,26 +130,24 @@ if (isset($_POST['login_user'])) {
   }
 
   // Add Service Request To Service Page
-  if (isset($_POST['add_request'])) {
+  if (isset($_POST['send_request'])) {
 
-    $userid = mysqli_real_escape_string($db, $_POST['user_id']);
     $username = mysqli_real_escape_string($db, $_POST['user_name']);
     $useremail = mysqli_real_escape_string($db, $_POST['user_email']);
     $productcategory = mysqli_real_escape_string($db, $_POST['product_category']);
     $problemdescription = mysqli_real_escape_string($db, $_POST['problem_description']);
   
 
-    if (empty($username)) { array_push($errors, "Your Name is required"); }
+    if (empty($username)) { array_push($errors, "Name is required"); }
     if (empty($useremail)) { array_push($errors, "Email is required"); }
-    if (empty($productcategory)) { array_push($errors, "Product Category is required"); }
-    if (empty($priproblemdescriptionce)) { array_push($errors, "Problem Description is required"); }
+    if (empty($productcategory)) { array_push($errors, "Category is required"); }
+    if (empty($problemdescription)) { array_push($errors, "Problem Description is required"); }
 
     if (count($errors) == 0) {
-      $category =strtolower($category);
-      $query = "INSERT INTO service (user_id, user_name, user_email, product_category, problem_description) 
-      VALUES('$userid', '$username', '$useremail', '$productcategory', '$problemdescription')";
+      $useremail =strtolower($useremail);
+      $query = "INSERT INTO service (user_name, user_email, product_category, problem_description)
+      VALUES('$username', '$useremail', '$productcategory', '$problemdescription')";
       mysqli_query($db, $query);
-      $_SESSION['user_id'] = $userid;
       $_SESSION['user_name'] = $username;
       $_SESSION['user_email'] = $useremail;
       $_SESSION['product_category'] = $productcategory;
@@ -153,5 +155,18 @@ if (isset($_POST['login_user'])) {
     }
     header("Location: Service.php");
   }
-  
+
+
+  //search function code
+
+  $query = mysqli_query($db, "SELECT * FROM product");
+
+  if (isset($_POST['submit_search_text'])){
+    $search = $_POST['search'];
+    $query = mysqli_query($db, "SELECT * FROM product WHERE title LIKE '%$search%' OR specification LIKE '%$search%'");
+    while($row = mysqli_fetch_assoc($query)) echo "<h1>" .$row['title']."</h1><p>".$row['tetxt']."</p><br>";
+    
+  }
+
+
 ?>

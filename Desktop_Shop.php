@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style/sstyle.css" rel="stylesheet" type="text/css"/>
+    <link href="style/style.css" rel="stylesheet" type="text/css"/>
     <link rel="icon" type="image/x-icon" href="/foto/icon/Icon.ico">
     <title>Desktop Shop</title>
 </head>
@@ -25,10 +25,10 @@
                                 <button class="dropbtn">
                                     <img src="foto/user-logo-test.jpeg" class="dropdown-image">
                                     <div class="dropdown-content">
-                                        <a href="Profile.php">Profile</a>
+                                        <a href="Profile.php">Profils</a>
                                         <a href="Cart.php">Groza</a>
                                         <?php  if (isset($_SESSION['username'])) : ?>
-                                            <a href="login.php?logout='1'">Logout</a>
+                                            <a href="login.php?logout='1'">Iziet</a>
                                         <?php endif ?>  
                                     </div>
                                 </button>
@@ -40,11 +40,9 @@
         </header>
         <div class="lgse">
             <div class="searchdiv">
-                <input class="search-input" type="text" placeholder="Search">
+                <input class="search-input" type="text" placeholder="Meklēt..." name="search">
                 <div class="sumbit_div">
-                    <a class="sumbit_a" href="#">
-                        <image class="searchph" src="foto/atb/search.svg"></image>
-                    </a>
+                    <input class="submit-input" type="submit" name="submit" value="Meklēt">
                 </div>
             </div>
         </div>
