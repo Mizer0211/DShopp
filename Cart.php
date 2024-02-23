@@ -22,7 +22,7 @@ $results = mysqli_query($conn, $sql);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style/cartstyle.css" rel="stylesheet" type="text/css"/>
-    <link rel="icon" type="image/x-icon" href="../foto/icon/Icon.ico">
+    <link rel="icon" type="image/x-icon" href="/foto/icon/Icon.ico">
     <title>Groza</title>
 </head>
 <body>
@@ -41,8 +41,9 @@ $results = mysqli_query($conn, $sql);
         </header>
 
         <div class="cart-container">
-
+            
             <div class="cart-title">
+                <div class="back-to-profile"><a href="Profile.php">Atpakal uz profilu</a></div>
                 <h1>Mana groza</h1>
             </div>
 
@@ -51,32 +52,24 @@ $results = mysqli_query($conn, $sql);
 
                     <tr class="table-headers">
                         <th>Prece</th>
-                        <th>Nosaukums</th>
-                        <th>Skaits</th>
-                        <th>Cena par gabalu</th>
-                        <th>Kopējā cena</th>
+                        <th>Apraksts</th>
+                        <th>Cena</th>
                     </tr>
 
                     <tr class="table-item-container">
 
                         <th class="cart-product-list-1">
                             <div class="item-image-container">
-                                <img class="item-image-1" src="foto/atb/MouseDart.png">
+                                <img class="item-image" src="foto/atb/MouseDart.png">
+                                <a href="Dart.php" class="cart-product-link">HyperX Pulsefire Dart</a>
                             </div>
                         </th>
-                        <th class="cart-product-list">
-                            <a href="Dart.html" class="cart-product-link">HyperX Pulsefire Dart</a>
-                        </th>
-                        <th class="cart-product-list-amount">
+                        <th class="cart-product-list-description">
                             <div class="cart-product-lict-pos">
-                                <div class="product-amount">
-                                    <h4>1 gab.</h4>
+                                <div class="product-description">
+                                    <h4>Mouse HyperX paradīta datorspēlem un vienkāršam darbam</h4>
                                 </div>
-                                <a class="more-amount" href="">
-                                    <img src="foto/atb/plus2.png" class="plus-image">
-                                </a>
                             </div>
-                            <a href="#" class="delete-product">Izdzēst preci</a>
                             
                         </th>
                         <th class="cart-product-list">
@@ -84,26 +77,10 @@ $results = mysqli_query($conn, $sql);
                         </th>
 
                         <th class="cart-product-list-end">
-                            <h4>59,99 €</h4>
+                            <h4><a href="#">Dzēst preci</a></h4>
                         </th>
 
                     </tr>
-                    <?php
-                    foreach ($results as $id=>$result) {
-                        echo '
-                        <tr>
-                            <td>'.$result['product_picture'].'</td>
-                            <td>'.$result['product_title'].'</td>
-                            <td>'.$result['product_price'].'€</td>
-                            <td>'.$result['total_amount'].'€</td>
-                            <td>.
-                            <td>
-                                <button class="edit_button"><a href="EditProduct.php? id='.$result['product_id'].'">Edit</a></button>
-                                <button class="delete_button"> <a href="DeleteProduct.php? id='.$result['product_id'].'"> Delete </a> </button>
-                            </td>
-                        </tr>';
-                    }
-                    ?>
             </div>
 
         </div>
