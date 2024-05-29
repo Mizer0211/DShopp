@@ -1,0 +1,153 @@
+/*Main + Header Navigation*/
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+*{
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    background-color: #fdd08b;
+    background-image: url('../foto/background/Background.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin: auto;
+}
+
+
+.navmenu {
+    margin-top: 0;
+    background-color: #0f1c3b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navigation {
+    position: static;
+    text-decoration: none;
+    color : #ffffff;
+    cursor: pointer;
+    margin-right: 50px;
+    justify-content: space-between;
+}
+
+.navigation:hover {
+    transition: 0.3s;
+    color: #ffa723fa;
+}
+
+.flex-container {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+}
+
+.flex-container space-between {
+    justify-content: space-between;
+}
+
+.flex-item {
+    padding: 5px;
+    width: 60px;
+    height: 50px;
+    margin: 5px;
+    line-height: 50px;
+    text-align: center;
+}
+/*End*/
+
+/*Page Main Container*/
+
+.Admin_Container {
+    display: flex;
+    justify-content: center;
+}
+
+.Admin_Actions_Container {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    background-color: #0f1c3b;
+    border-radius: 15px;
+    border: 1px solid black;
+    height: 300px;
+    width: 500px;
+}
+
+.Admin_txt {
+    text-align: center;
+    color: #fdd08b;
+}
+
+.Action_Button_1 {
+    width: 140px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid #ffa723fa;
+    background-color: #fdd08b;
+    margin-bottom: 30px;
+}
+
+.Action_Button_2 {
+    width: 140px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid #ffa723fa;
+    background-color: #fdd08b;
+}
+
+.Action_Button_1:hover {
+    border: 1px solid #fdd08b;
+    background-color: #ffa723fa;
+    transform: scale(101%);
+    transition: 0.2s;
+}
+
+.Action_Button_2:hover {
+    border: 1px solid #fdd08b;
+    background-color: #ffa723fa;
+    transform: scale(101%);
+    transition: 0.2s;
+}
+
+
+.Action_Button_1:active {
+    background-color: #ffffff;
+}
+
+.Action_Button_2:active {
+    background-color: #ffffff;
+}
+
+.action_button_a {
+    text-decoration: none;
+    color: #0f1c3b;
+    font-weight: bolder;
+}
+
+.Admin_action_btn_container {
+    top: 58%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    display: flex;
+    gap: 30px;
+}
+
+.left_actions {
+    display: block;
+}
+
+.right_actions {
+    display: block;
+}

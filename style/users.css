@@ -1,0 +1,155 @@
+/*Main + Header Navigation*/
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+*{
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    background-color: #fdd08b;
+    background-image: url('../foto/background/Background.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin: auto;
+}
+
+
+.navmenu {
+    margin-top: 0;
+    background-color: #0f1c3b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navigation {
+    position: static;
+    text-decoration: none;
+    color : #ffffff;
+    cursor: pointer;
+    margin-right: 50px;
+    justify-content: space-between;
+}
+
+.navigation:hover {
+    transition: 0.3s;
+    color: #ffa723fa;
+}
+
+.flex-container {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+}
+
+.flex-container space-between {
+    justify-content: space-between;
+}
+
+.flex-item {
+    padding: 5px;
+    width: 60px;
+    height: 50px;
+    margin: 5px;
+    line-height: 50px;
+    text-align: center;
+}
+/*End*/
+
+/*BackToAPButton*/
+.back_to_AP_button {
+    top: 10%;
+    left: 3%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+}
+
+.back_AP_a {
+    padding: 5px;
+    color: #fdd08b;
+    text-decoration: none;
+    background-color: #0f1c3b;
+    border-radius: 10px;
+    border: 1px solid #ffa723fa;
+}
+
+.back_AP_a:hover {
+    text-decoration: underline;
+    transition: 0.2s;
+}
+/*End*/
+
+.ap_content {
+    top: 25%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+}
+
+.table_container {
+    margin-top: 40%;
+}
+
+table, th, td {
+    padding: 20px;
+    border: 1px solid #fdd08b;
+    border-collapse: collapse;
+    background-color: #0f1c3b;
+    color: #fdd08b;
+    border-radius: 20px;
+    text-align: center;
+}
+
+th {
+    white-space: normal;
+    min-width: 150px;
+    max-width: 150px;
+}
+
+td {
+    white-space: normal;
+    min-width: 150px;
+    max-width: 200px;
+}
+
+.table-header > th {
+    color: #ffa723fa;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+button {
+    width: 60px;
+    height: fit-content;
+    padding: 5px;
+    background-color: #fdd08b;
+    border: 1px solid #ffa723fa;
+    border-radius: 8px;
+    transition: 0.2s;
+    text-decoration: none;
+}
+
+button > a {
+    text-decoration: none;
+    color: #0f1c3b;
+}
+
+button:hover {
+    transform: scale(110%);
+}
+
+button > a:hover {
+    text-decoration: underline;
+}
+
+.delete_button:hover {
+    text-decoration: underline;
+    transform: scale(110%);
+}

@@ -13,7 +13,6 @@ if (!$conn) {
 $sql = "SELECT * FROM product";
 $results = mysqli_query($conn, $sql);
 
-
 mysqli_close($conn);
 
 ?>
@@ -23,7 +22,7 @@ mysqli_close($conn);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/aaddstyle.css">
+    <link rel="stylesheet" href="style/addstyle.css">
     <link rel="icon" type="image/x-icon" href="../foto/icon/Icon.ico">
     <title>Add Product</title>
 </head>
@@ -42,6 +41,9 @@ mysqli_close($conn);
             </div>
         </header>
         <div class="product-editor-container">
+            <div class="back_to_AP_button">
+                <a class="back_AP_a"href="Adminpage.php">Atpakaļ</a>
+            </div>
             <div class="form-container">
                 <form action="AddProduct.php" method="post">
                     <div>
@@ -67,7 +69,7 @@ mysqli_close($conn);
                         <input type="text" name="price"><br><br>
                     </div>
                     <div class="add-button-container">
-                        <button type="submit" class="btn" name="add_product">Add Product</button>
+                        <button type="submit" class="btn" name="add_product">Pievienot produktu</button>
                     </div>
                 </form>
             </div>
@@ -77,8 +79,8 @@ mysqli_close($conn);
                         <th>Nosaukums</th>
                         <th>Kategorija</th>
                         <th>Preces Apraksts</th>
-                        <th>Cena</th>
-                        <th>Edit</th>
+                        <th>Cēna</th>
+                        <th>Rediģēt</th>
                     </tr>
                     <?php
                     foreach ($results as $id=>$result) {
@@ -89,8 +91,8 @@ mysqli_close($conn);
                             <td>'.$result['specification'].'</td>
                             <td>'.$result['price'].' €</td>
                             <td>
-                                <button class="edit_button"><a href="EditProduct.php? id='.$result['product_id'].'">Edit</a></button>
-                                <button class="delete_button"> <a href="DeleteProduct.php? id='.$result['product_id'].'"> Delete </a> </button>
+                                <button class="edit_button"><a href="EditProduct.php? id='.$result['product_id'].'">Rediģēt</a></button>
+                                <button class="delete_button"> <a href="DeleteProduct.php? id='.$result['product_id'].'"> Dzēst </a> </button>
                             </td>
                         </tr>';
                     }

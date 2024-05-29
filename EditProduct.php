@@ -74,8 +74,8 @@ if (isset($_POST['edit_product'])) {
                         <input type="text" name="edit_price" value="<?php echo $result['price'];?>"><br><br>
                     </div>
                     <div class="edit-button-container">
-                        <button class="edit_button"><a href="AddProduct.php">Cancel</a></button>
-                        <button type="submit" class="edit_button" name="edit_product">Edit Product</button>
+                        <button class="edit_button"><a href="AddProduct.php">Atcelt</a></button>
+                        <button type="submit" class="edit_button" name="edit_product">Saglabāt</button>
                     </div>
                 </form>
             </div>

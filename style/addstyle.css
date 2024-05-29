@@ -64,6 +64,30 @@ body {
     margin-left: 250px;
 }
 
+/*BackToAPButton*/
+.back_to_AP_button {
+    top: 10%;
+    left: 3%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+}
+
+.back_AP_a {
+    padding: 5px;
+    color: #fdd08b;
+    text-decoration: none;
+    background-color: #0f1c3b;
+    border-radius: 10px;
+    border: 1px solid #ffa723fa;
+}
+
+.back_AP_a:hover {
+    text-decoration: underline;
+    transition: 0.2s;
+}
+/*End*/
+
+
 form {
     display: flex;
     padding: 40px;
@@ -101,8 +125,8 @@ input {
 }
 
 .add-button-container > .btn {
-    width: 100px;
-    height: 30px;
+    width: 80px;
+    height: 50px;
     border-radius: 15px;
     border: 1px solid #0f1c3b;
     background-color: #ffa723fa;
@@ -152,7 +176,7 @@ td {
 }
 
 button {
-    width: 50px;
+    width: 60px;
     height: fit-content;
     padding: 5px;
     background-color: #fdd08b;

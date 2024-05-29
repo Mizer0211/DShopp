@@ -81,9 +81,8 @@ if (!$conn) {
                         <div class="user-info-text">
                             <p>Vārds : <?php echo $_SESSION['username']; ?></p>
                             <p>Email : <?php echo $_SESSION['email']; ?></p>
-                            <?php if(isset($_SESSION['is_admin']) && $_SESSION['is_admin'] == 1) { 
-                                echo '';
-                            }?>
+
+
                             <div class="btnchoicer">
                                 <div class="changepasswordbtn">
                                     <button class="change-password" type="button">
@@ -92,7 +91,7 @@ if (!$conn) {
                                     <button class="change-user-info" type="button">
                                         <a href="EditProfile.php">Rediģēt profila datus</a>
                                     </button>
-
+                                                                        
                                 </div>
 
                             </div>
