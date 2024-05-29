@@ -113,6 +113,7 @@ body {
 .searchdiv {
     position: static;
     display: flex;
+    justify-content: center;
     margin-left: 30.5%;
     padding-left: 5px;
     height: 36px;
@@ -121,9 +122,10 @@ body {
     background-color: #fdd08b;
 }
 
+
 .search-input {
     margin-top: 2px;
-    width: 300px;
+    width: 330px;
     height: 30px;
     border: 0;
     outline: none;
@@ -132,13 +134,16 @@ body {
 }
 
 .sumbit_div {
-    margin: 0px 5px 0 10px;
     text-align: center;
-    width: 27px;
-    height: 27px;
-    background-color: #ffa723fa;
-    border-radius: 5px;
-    border: 1px solid #0f1c3b;
+}
+
+.submit-input {
+    height: 35px;
+    border-radius: 8px;
+    border-right: 1px;
+    border-top: 1px;
+    border-bottom: 1px;
+    border-left: 1px solid #0f1c3b;
 }
 
 .searchph {

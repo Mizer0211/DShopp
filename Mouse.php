@@ -25,7 +25,7 @@ mysqli_close($conn);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style/mmousesstyle.css" rel="stylesheet" type="text/css">
+    <link href="style/mousesstyle.css" rel="stylesheet" type="text/css">
     <link rel="icon" type="image/x-icon" href="/foto/icon/Icon.ico">
     <title>Mouses</title>
 </head>
@@ -51,11 +51,21 @@ mysqli_close($conn);
             <a class="locate" href="Mouse.php">Peles</a>
         </div>
 
+        <!-- For Search Function 
         <div class="searchdiv">
             <form method="post">
                 <input type="text" name="search" class="search-input" placeholder="Meklēt...">
                 <input class="submit-button" type="submit" name="submit" value="Meklēt">
             </form>
+        </div>
+        <div class="lgse">   -->
+
+            <div class="searchdiv">
+                <input class="search-input" type="text" placeholder="Meklēt..." name="search">
+                <div class="sumbit_div">
+                    <input class="submit-input" type="submit" name="submit" value="Meklēt">
+                </div>
+            </div>
         </div>
     </div>
 
