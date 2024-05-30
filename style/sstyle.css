@@ -158,11 +158,13 @@ body {
 
 .submit-input {
     height: 35px;
-    border-radius: 8px;
+    border-radius: 7px;
     border-right: 1px;
     border-top: 1px;
     border-bottom: 1px;
     border-left: 1px solid #0f1c3b;
+    background-color: #0f1c3b;
+    color: #fdd08b;
 }
 
 .searchph {

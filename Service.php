@@ -13,7 +13,6 @@ if (!$conn) {
 $sql = "SELECT * FROM service";
 $results = mysqli_query($conn, $sql);
 
-
 mysqli_close($conn);
 
 ?>
@@ -62,12 +61,12 @@ mysqli_close($conn);
                     <div class="dropdown">
                         <p>Lūdzu, norādiet ar kādu tipu ierīci saistīta jūsu problēma :</p>
                         <input class="choice-input" list="choice" name="product_category" placeholder="Izvēle"/>
-                        <datalist id="choice">
+                     <!--   <datalist id="choice">
                           <option id="choice-atb" value="Datoru">
                           <option value="Monitoru">
                           <option value="Datoru perifēriju">
                           <option value="Programmatūru">
-                        </datalist>
+                        </datalist>  -->
                     </div>
                 </div>
                 <div class="write-about">

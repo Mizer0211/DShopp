@@ -10,6 +10,8 @@ body {
     background-repeat: no-repeat;
     background-size: 100%;
     margin: 0;
+    overflow-y: auto;
+    background-attachment: fixed ;
 }
 
 
@@ -138,12 +140,14 @@ body {
 }
 
 .submit-input {
-    height: 35px;
-    border-radius: 8px;
+    height: 36px;
+    border-radius: 7px;
     border-right: 1px;
     border-top: 1px;
     border-bottom: 1px;
     border-left: 1px solid #0f1c3b;
+    background-color: #0f1c3b;
+    color: #fdd08b;
 }
 
 .searchph {
@@ -173,6 +177,7 @@ body {
 
 .object {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
 }

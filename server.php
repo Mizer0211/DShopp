@@ -158,7 +158,6 @@ if (isset($_POST['login_user'])) {
 
 
   //search function code
-
   $query = mysqli_query($db, "SELECT * FROM product");
 
   if (isset($_POST['submit_search_text'])){
@@ -167,6 +166,5 @@ if (isset($_POST['login_user'])) {
     while($row = mysqli_fetch_assoc($query)) echo "<h1>" .$row['title']."</h1><p>".$row['tetxt']."</p><br>";
     
   }
-
 
 ?>

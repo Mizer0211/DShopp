@@ -6,14 +6,11 @@
 
 body {
     background-color: #fdd08b;
-<<<<<<< HEAD
     background-image: url(../foto/Background/Background.svg);
-=======
-    background-image: url(../foto/background/Background.svg);
->>>>>>> a8da1a7d8d82612637de50ea29544aaaa6efb4d4
     background-repeat: no-repeat;
     background-size: 100%;
     margin: 0;
+    background-attachment: fixed ;
 }
 
 .navmenu {
