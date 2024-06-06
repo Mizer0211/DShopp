@@ -5,6 +5,7 @@ $sql = "SELECT * FROM product WHERE product_id='$id'";
 
 $result = mysqli_query($db, $sql)->fetch_assoc();
 
+
 ?>
 
 
@@ -14,7 +15,7 @@ $result = mysqli_query($db, $sql)->fetch_assoc();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HyperX Pulsefire Dart mouse</title>
+    <title>Klaviatūra</title>
     <link href="style/ddartstyle.css" rel="stylesheet" type="text/css"/>
     <link rel="icon" type="image/x-icon" href="/foto/icon/Icon.ico">
 </head>
@@ -37,9 +38,7 @@ $result = mysqli_query($db, $sql)->fetch_assoc();
         <div class="location">
             <a class="locate" href="Desktop_Shop.php">DShop</a>
             <h3 class="hloc">></h3>
-            <a class="locate" href="Mouse.php">Peles</a>
-            <h3 class="hloc">></h3>
-            <a class="locate" href="Dart.php">HyperX Datorpele</a>
+            <a class="locate" href="Keyboards.php">Klaviatūras</a>
         </div>
     </div>
 
@@ -53,31 +52,31 @@ $result = mysqli_query($db, $sql)->fetch_assoc();
 
                     <div class="MouseSlider fade">
                         <div class="photo">1 / 4</div>
-                        <img src="foto/atb/mouse-removebg-preview.png" style="width: 350px;">
+                        <img src="foto/atb/keyboard/keyboard1.png" style="width: 350px;">
                     </div>
     
                     <div class="MouseSlider fade">
                         <div class="photo">2 / 4</div>
-                        <img src="foto/atb/dartmiddleside-removebg-preview.png" style="width: 350px;">
+                        <img src="foto/atb/keyboard/keyboard2.png" style="width: 350px;">
                     </div>
     
                     <div class="MouseSlider fade">
                         <div class="photo">3 / 4</div>
-                        <img src="foto/atb/dartside-removebg-preview.png" style="width: 350px;">
+                        <img src="foto/atb/keyboard/keyboard3.png" style="width: 350px;">
                     </div>
     
                     <div class="MouseSlider fade">
                         <div class="photo">4 / 4</div>
-                        <img src="foto/atb/dartcompl+-removebg-preview.png" style="width: 350px;">
+                        <img src="foto/atb/keyboard/keyboard4.png" style="width: 350px;">
                     </div>
     
                 </div>
     
                 <div class="dot-container" style="text-align: center;">
-                    <span class="dot" onclick="currentSlide(1)"><img id="dot-photo" src="foto/atb/mouse.jpg"></span>
-                    <span class="dot" onclick="currentSlide(2)"><img id="dot-photo" src="foto/atb/dartmiddleside.jpg"></span>
-                    <span class="dot" onclick="currentSlide(3)"><img id="dot-photo" src="foto/atb/dartside.jpg"></span>
-                    <span class="dot" onclick="currentSlide(4)"><img id="dot-photo" src="foto/atb/dartcompl+.jpg"></span>
+                    <span class="dot" onclick="currentSlide(1)"><img id="dot-photo" src="foto/atb/keyboard/keyboard1.png"></span>
+                    <span class="dot" onclick="currentSlide(2)"><img id="dot-photo" src="foto/atb/keyboard/keyboard2.png"></span>
+                    <span class="dot" onclick="currentSlide(3)"><img id="dot-photo" src="foto/atb/keyboard/keyboard3.png"></span>
+                    <span class="dot" onclick="currentSlide(4)"><img id="dot-photo" src="foto/atb/keyboard/keyboard4.png"></span>
                 </div>
                 
             </div>
@@ -140,10 +139,6 @@ $result = mysqli_query($db, $sql)->fetch_assoc();
                                     <tr>
                                         <td class="talbe-cell">Modelis</td>
                                         <td class="talbe-cell">Pulsefire Dart Wireless</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="talbe-cell">Pogu skaits</td>
-                                        <td class="talbe-cell">6</td>
                                     </tr>
                                 </div>
 

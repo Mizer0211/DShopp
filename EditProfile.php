@@ -2,8 +2,8 @@
 
 $db = mysqli_connect('localhost', 'root', '', 'desktopshop');
 
-$id = 'user_id';
 
+$id=$_GET['user_id'];
 $sql = "SELECT * FROM users WHERE user_id='$id'";
 
 

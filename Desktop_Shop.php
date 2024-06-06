@@ -1,5 +1,4 @@
 <?php include('server.php');
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +22,7 @@
                         <li class="dropdown-item">
                             <div class="dropdown">
                                 <button class="dropbtn">
-                                    <img src="foto/user-logo-test.jpeg" class="dropdown-image">
+                                    <img src="foto/logo/user-logo-test.jpeg" class="dropdown-image">
                                     <div class="dropdown-content">
                                         <a href="Profile.php">Profils</a>
                                         <a href="Cart.php">Groza</a>
@@ -52,16 +51,15 @@
 
 
             <div class="dproduct">
-                <img class="components" src="foto/atb/component.png">
-                <h2><a class="attxt" href="#">Komponentes</a></h2>
+                <img class="components" src="foto/atb/Component/component.png">
+                <h2><a class="attxt" href="Components.php">Komponentes</a></h2>
             </div>
 
 
             <div class="dproduct">
                 <img class="monitor" src="foto/atb/monitor.png">
-                <h2><a class="attxt" href="#">Monitori</a></h2>
+                <h2><a class="attxt" href="Monitori.php">Monitori</a></h2>
             </div>
-
 
             <div class="dproduct">
                 <img class="mouse" src="foto/atb/mouse.png">
@@ -70,14 +68,14 @@
 
 
             <div class="dproduct">
-                <img class="keyboard" src="foto/atb/keyboard.png">
-                <h2 class="ktxt"><a class="attxt" href="#">Klaviaturas</a></h2>
+                <img class="keyboard" src="foto/atb/keyboard/keyboard1.png">
+                <h2 class="ktxt"><a class="attxt" href="Keyboards.php">Klaviatūras</a></h2>
             </div>
 
 
             <div class="dproduct">
                 <img class="headphones" src="foto/atb/headphones.png">
-                <h2 class="atxt"><a class="attxt" href="#">Austinas</a></h2>
+                <h2 class="atxt"><a class="attxt" href="Headphones.php">Austiņas</a></h2>
             </div>
 
 

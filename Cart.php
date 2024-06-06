@@ -1,5 +1,6 @@
 <?php include('server.php');
 
+// connect to the database
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -8,11 +9,9 @@ $conn = mysqli_connect($servername, $username, $password, $dbname,);
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
+$query = "set names utf8";
+$conn->query($query);
 
-
-$id = "SELECT user_id FROM users";
-$sql = "SELECT * FROM cart WHERE user_id='$id'";
-$results = mysqli_query($conn, $sql);
 
 ?>
 <!DOCTYPE html>
@@ -23,9 +22,11 @@ $results = mysqli_query($conn, $sql);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style/cartstyle.css" rel="stylesheet" type="text/css"/>
     <link rel="icon" type="image/x-icon" href="/foto/icon/Icon.ico">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/Cart.js"></script>
     <title>Groza</title>
 </head>
-<body>
+<body onLoad="showMyCart()">
     <div class="content">
         <header>
             <div class="navmenu">
@@ -47,7 +48,7 @@ $results = mysqli_query($conn, $sql);
                 <h1>Mana groza</h1>
             </div>
 
-            <div class="item-container">
+            <div class="item-container" id="in-check">
                 <table class="table-container">
 
                     <tr class="table-headers">

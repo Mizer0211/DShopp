@@ -10,7 +10,7 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$sql = "SELECT * FROM service";
+$sql = "SELECT * FROM workshop";
 $results = mysqli_query($conn, $sql);
 
 mysqli_close($conn);
@@ -60,7 +60,7 @@ mysqli_close($conn);
                     </div>
                     <div class="dropdown">
                         <p>Lūdzu, norādiet ar kādu tipu ierīci saistīta jūsu problēma :</p>
-                        <input class="choice-input" list="choice" name="product_category" placeholder="Izvēle"/>
+                        <input class="choice-input" list="choice" name="category" placeholder="Izvēle"/>
                      <!--   <datalist id="choice">
                           <option id="choice-atb" value="Datoru">
                           <option value="Monitoru">
@@ -75,7 +75,7 @@ mysqli_close($conn);
                 </div>
                 <div class="sumbit-div-content">
                     <div class="sumbit-div">
-                        <button type="submit" class="btn" name="send_request">Nosūtīt pieprasījumu</button>
+                        <button type="submit" class="btn" name="request">Nosūtīt pieprasījumu</button>
                     </div>
                 </div>
             </div>

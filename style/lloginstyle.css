@@ -15,13 +15,12 @@ body {
   background-position-x: 102%;
   background-position-y: 3%;
   margin: 0;
-  background-attachment: fixed ;
 }
 
 .content {
   position: fixed;
   top: 17%;
-  left: 27%;
+  left: 26.8%;
 }
 
 .register-div {

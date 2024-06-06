@@ -16,9 +16,9 @@ $output = '';
 // Check if search form is submitted
 if (isset($_POST['search'])) {
     $q = mysqli_real_escape_string($conn, $_POST['q']);
-    $sql = "SELECT * FROM product WHERE title LIKE '%$q%' AND category='peles'";
+    $sql = "SELECT * FROM product WHERE title LIKE '%$q%' AND category='component'";
 } else {
-    $sql = "SELECT * FROM product WHERE category='peles'";
+    $sql = "SELECT * FROM product WHERE category='component'";
 }
 
 $results = mysqli_query($conn, $sql);
@@ -57,7 +57,7 @@ mysqli_close($conn);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style/pproductstyle.css" rel="stylesheet" type="text/css">
     <link rel="icon" type="image/x-icon" href="/foto/icon/Icon.ico">
-    <title>Mouses</title>
+    <title>Komponenti</title>
 </head>
 <body>
     <header>
@@ -78,7 +78,7 @@ mysqli_close($conn);
         <div class="location">
             <a class="locate" href="Desktop_Shop.php">DShop</a>
             <h3 class="hloc">></h3>
-            <a class="locate" href="Mouse.php">Peles</a>
+            <a class="locate" href="Components.php"></a>
         </div>
 
         <div class="searchdiv">

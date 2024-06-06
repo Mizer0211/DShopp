@@ -182,7 +182,7 @@ body {
     gap: 20px;
 }
 
-.mouse {
+.monitor {
     margin-top: 50px;
     width: 270px;
     height: 370px;
@@ -191,7 +191,8 @@ body {
     border-radius: 15px;
 }
 
-.mouse-header {
+.monitor-header {
+    display: grid;
     text-align: center;
     padding-top: 15px;
     width: auto;
@@ -201,13 +202,13 @@ body {
     border-top-left-radius: 15px;
 }
 
-.mouseimg {
+.monitorimg {
     margin-top: 6%;
     height: 150px;
     user-select: none;
 }
 
-.mouselink {
+.monitorlink {
     text-decoration: none;
     color: #0f1c3b;
 }
@@ -218,25 +219,17 @@ body {
     transition: 0.3s;
 }
 
-.mousedisc {
+.monitordisc {
     display: block;
     font-size: 15px;
     border-top: 1px solid;
     padding: 10px;
 }
 
-.mousedisc > ul {
+.monitordisc > ul {
     margin-bottom: 0;
     list-style: none;
     padding-left: 10px;
-}
-
-.add-product-to-cart {
-    border-radius: 7px;
-    border: 1px  solid;
-    background-color: #fdd08b;
-    height: 30px;
-    cursor: pointer;
 }
 
 .show-more-about_product {
@@ -255,15 +248,34 @@ body {
     text-decoration: underline;
 }
 
+
+
+.add-to-cart {
+    color: #0f1c3b;
+    background-color: #fdd08b;
+    border: 1px solid #0f1c3b;
+    border-radius: 5px;
+}
+
+.add-to-cart > a {
+    color: #0f1c3b;
+    text-decoration: none;
+}
+
+.add-to-cart > a:hover {
+    text-decoration: underline;
+}
+
+
 .action {
     text-align: center;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
     justify-content: center;
 }
 
-.mouse-text-disc {
+.monitor-text-disc {
     display: flex;
     padding: 5px;
     justify-content: center;

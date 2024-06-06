@@ -22,7 +22,7 @@ mysqli_close($conn);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/aaddstyle.css">
+    <link rel="stylesheet" href="style/addstyle.css">
     <link rel="icon" type="image/x-icon" href="../foto/icon/Icon.ico">
     <title>Add Product</title>
 </head>
@@ -54,10 +54,12 @@ mysqli_close($conn);
                         <label for="lname">Preces kategorija :</label><br>
                         <input class="choice-input" list="choice" name="category" placeholder="Izvēle"/><br>
                         <datalist id="choice">
-                            <option value="Datori">
-                            <option value="Monitori">
-                            <option value="Datoru perifērija">
-                            <option value="Datoru aksesuari">
+                            <option value="dators">
+                            <option value="monitors">
+                            <option value="klaviatura">
+                            <option value="peles">
+                            <option value="datoru aksesuars">
+                            <option value="component">
                         </datalist>
                     </div>
                     <div>

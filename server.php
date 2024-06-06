@@ -13,7 +13,6 @@ $price = "price";
 $admin = "is_admin";
 $username = "user_name";
 $useremail = "user_email";
-$productcategory = "product_category";
 $problemdescription = "problem_description";
 
 $errors = array(); 
@@ -90,6 +89,7 @@ if (isset($_POST['login_user'])) {
         $results = mysqli_query($db, $query);
         $new = mysqli_fetch_row($results);
         if (mysqli_num_rows($results) == 1) {
+          $_SESSION['user_id'] = $userid;
           $_SESSION['username'] = $username;
           $_SESSION['email'] = $new[2];
           $_SESSION['is_admin'] = $admin;
@@ -128,6 +128,7 @@ if (isset($_POST['login_user'])) {
     }
     header("Location: AddProduct.php");
   }
+
 
   // Add Service Request To Service Page
   if (isset($_POST['send_request'])) {

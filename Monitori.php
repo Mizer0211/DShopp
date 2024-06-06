@@ -16,9 +16,9 @@ $output = '';
 // Check if search form is submitted
 if (isset($_POST['search'])) {
     $q = mysqli_real_escape_string($conn, $_POST['q']);
-    $sql = "SELECT * FROM product WHERE title LIKE '%$q%' AND category='peles'";
+    $sql = "SELECT * FROM product WHERE title LIKE '%$q%' AND category='monitors'";
 } else {
-    $sql = "SELECT * FROM product WHERE category='peles'";
+    $sql = "SELECT * FROM product WHERE category='monitors'";
 }
 
 $results = mysqli_query($conn, $sql);
@@ -29,7 +29,7 @@ if (mysqli_num_rows($results) > 0) {
         <div class="product">
             <div class="product-header">
                 <a class="productlink"><span class="Name">'.$row['title'].'</span></a>
-                <a><img class="productimg" src="foto/atb/mousedart.png"></a>
+                <a><img class="productimg" src="foto/atb/monitor/monitor1.png"></a>
             </div>
             <div class="productdisc">
                 <div class="product-text-disc">
@@ -37,7 +37,7 @@ if (mysqli_num_rows($results) > 0) {
                 </div>
                 <div class="action">
                     <a class="product_price">'.$row['price'].' €</a>
-                    <button class="show-more-about_product"><a href="Dart.php?id='.$row['product_id'].'">Show More</a></button>
+                    <button class="show-more-about_product"><a href="Monitor.php?id='.$row['product_id'].'">Show More</a></button>
                     <button class="add-to-cart"><a href="AddToCart.php?id='.$row['product_id'].'">Add To Cart</a></button>
                 </div>
             </div>
@@ -57,7 +57,7 @@ mysqli_close($conn);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style/pproductstyle.css" rel="stylesheet" type="text/css">
     <link rel="icon" type="image/x-icon" href="/foto/icon/Icon.ico">
-    <title>Mouses</title>
+    <title>Monitori</title>
 </head>
 <body>
     <header>
@@ -78,7 +78,7 @@ mysqli_close($conn);
         <div class="location">
             <a class="locate" href="Desktop_Shop.php">DShop</a>
             <h3 class="hloc">></h3>
-            <a class="locate" href="Mouse.php">Peles</a>
+            <a class="locate" href="Monitori.php">Monitori</a>
         </div>
 
         <div class="searchdiv">

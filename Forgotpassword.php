@@ -11,21 +11,21 @@ if (isset($_REQUEST['doGo'])) {
         $message = '
                 <html>
                 <head>
-                <title>Подтвердите Email</title>
+                <title>Apstiprinājiet Email</title>
                 </head>
                 <body>
-                <p>Что бы восстановить пароль перейдите по <a href="http://example.com/newpass.php?hash=' . $hash . '">ссылка</a></p>
+                <p>Lai atgūtu paroli, dodieties uz <a href="http://example.com/newpass.php?hash=' . $hash . '">ссылка</a></p>
                 </body>
                 </html>
                 ';
         mysqli_query($db, "UPDATE `users` SET hash='$hash' WHERE user_email='$email'");
-        if (mail($email, "Восстановление пароля через Email", $message, $headers)) {
-            echo 'Ссылка для восстановления пароля отправленная на вашу почту';
+        if (mail($email, "Paroles atkopšana caur e-pastu", $message, $headers)) {
+            echo 'Paroles atkopšanas saite nosūtīta uz jūsu e-pastu';
         } else {
-            echo 'Произошла какая то ошибка, письмо отправилось';
+            echo 'Radās kļūda, vēstule netika nosūtīta';
         }
     } else {
-        echo "Вы не ввели Email"; 
+        echo "Jūs neesat ievadījis savu e-pastu"; 
     }
 }
 ?>
@@ -37,12 +37,12 @@ if (isset($_REQUEST['doGo'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/forgotpassword.css">
-    <title>Forgot password</title>
+    <title>Azimirsāt paroli</title>
 </head>
 <body>
     <form action="<?= $_SERVER['SCRIPT_NAME'] ?>" method="post">
-        <p>Введите ваш EMail: <input type="email" name="email"></p>
-        <p><input type="submit" value="Отправить" name="doGo"></p>
+        <p>Ievadieе jūsu e-pastu <input type="email" name="email"></p>
+        <p><input type="submit" value="Send" name="doGo"></p>
     </form>
 
 </body>
