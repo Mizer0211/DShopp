@@ -50,7 +50,7 @@ $is_admin = mysqli_fetch_assoc($result)['is_admin'];
                         <li class="flex-item"><a class="navigation" href="Desktop_Shop.php">Veikals</a></li>
                         <li class="flex-item"><a class="navigation" href="Service.php">Serviss</a></li>
                         <li class="flex-item"><a class="navigation" href="Delivery.php">Piegade</a></li>
-                        <li class="flex-item"><a class="navigation" href="Kontakti.php">Kontakti</a></li>
+                        <li class="flex-item"><a class="navigation" href="Contacts.php">Kontakti</a></li>
                         <?php 
                         // Vērtības is_admin pārbaude un pogas parādīšana atkarībā no tās
                         if ($is_admin == 1) {
@@ -86,11 +86,12 @@ $is_admin = mysqli_fetch_assoc($result)['is_admin'];
             <div class="user-info-container">
                 <div class="user-info">
                     <div class="user-logo-view">
-                        <img class="profile-logo" src="foto/user-logo-test.jpeg" alt="Avatar">
+                        <img class="profile-logo" src="foto/logo/user-logo-test.jpeg" alt="Avatar">
                     </div>
                     <div class="user-info-text">
                         <p>Vārds : <?php echo $_SESSION['username']; ?></p>
                         <p>Email : <?php echo $_SESSION['email']; ?></p>
+                        <p>Email : <?php echo $_SESSION[$is_admin]; ?></p>
 
                         <div class="btnchoicer">
                             <div class="changepasswordbtn">

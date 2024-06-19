@@ -10,7 +10,7 @@ $title = "title";
 $category = "category";
 $specification = "specification";
 $price = "price";
-$admin = "is_admin";
+$is_admin = "is_admin";
 $username = "user_name";
 $useremail = "user_email";
 $problemdescription = "problem_description";
@@ -92,7 +92,7 @@ if (isset($_POST['login_user'])) {
           $_SESSION['user_id'] = $userid;
           $_SESSION['username'] = $username;
           $_SESSION['email'] = $new[2];
-          $_SESSION['is_admin'] = $admin;
+          $_SESSION['is_admin'] = $is_admin;
           $_SESSION['success'] = "You are now logged in";
           header('location: Profile.php');
         }else {

@@ -48,7 +48,7 @@ if (isset($_POST['edit_product'])) {
                         <li class="flex-item"><a class="navigation" href="Desktop_Shop.php">Veikals</a></li>
                         <li class="flex-item"><a class="navigation" href="Service.php">Serviss</a></li>
                         <li class="flex-item"><a class="navigation" href="Delivery.php">Piegade</a></li>
-                        <li class="flex-item"><a class="navigation" href="Kontakti.php">Kontakti</a></li>
+                        <li class="flex-item"><a class="navigation" href="Contacts.php">Kontakti</a></li>
                     </ul>
                 </nav>
             </div>

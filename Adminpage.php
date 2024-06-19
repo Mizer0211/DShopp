@@ -34,7 +34,7 @@ mysqli_close($conn);
                         <li class="flex-item"><a class="navigation" href="Desktop_Shop.php">Veikals</a></li>
                         <li class="flex-item"><a class="navigation" href="Service.php">Serviss</a></li>
                         <li class="flex-item"><a class="navigation" href="Delivery.php">Piegade</a></li>
-                        <li class="flex-item"><a class="navigation" href="Kontakti.php">Kontakti</a></li>
+                        <li class="flex-item"><a class="navigation" href="Contacts.php">Kontakti</a></li>
                     </ul>
                 </nav>
             </div>
@@ -62,7 +62,7 @@ mysqli_close($conn);
                 <div class="right_actions">
 
                     <div class="Action_Button_1">
-                        <a class="action_button_a" href="http://localhost/phpmyadmin/index.php?route=/database/structure&db=desktopshop" target="_blank">Atvērt Datubāzi</a>
+                        <a class="action_button_a" href="http://localhost:8081/phpmyadmin/index.php?route=/database/structure&db=desktopshop" target="_blank">Atvērt Datubāzi</a>
                     </div>
 
                     <div class="Action_Button_2">

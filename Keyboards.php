@@ -67,7 +67,7 @@ mysqli_close($conn);
                     <li class="flex-item"><a class="navigation" href="Desktop_Shop.php">Veikals</a></li>
                     <li class="flex-item"><a class="navigation" href="Service.php">Service</a></li>
                     <li class="flex-item"><a class="navigation" href="Delivery.php">Piegāde</a></li>
-                    <li class="flex-item"><a class="navigation" href="Kontakti.php">Kontakti</a></li>
+                    <li class="flex-item"><a class="navigation" href="Contacts.php">Kontakti</a></li>
                 </ul>
             </nav>
         </div>

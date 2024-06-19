@@ -18,7 +18,7 @@
                     <ul class="flex-container space-between"> 
                         <li class="flex-item"><a class="navigation" href="Service.php">Serviss</a></li>
                         <li class="flex-item"><a class="navigation" href="Delivery.php">Piegade</a></li>
-                        <li class="flex-item"><a class="navigation" href="Kontakti.php">Kontakti</a></li>
+                        <li class="flex-item"><a class="navigation" href="Contacts.php">Kontakti</a></li>
                         <li class="dropdown-item">
                             <div class="dropdown">
                                 <button class="dropbtn">
