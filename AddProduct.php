@@ -45,7 +45,7 @@ mysqli_close($conn);
                 <a class="back_AP_a"href="Adminpage.php">Atpakaļ</a>
             </div>
             <div class="form-container">
-                <form action="AddProduct.php" method="post">
+                <form action="AddProduct.php" method="post" autocomplete="off">
                     <div>
                         <label for="fname">Preces nosaukums :</label><br>
                         <input type="text" name="title"><br>
@@ -54,12 +54,12 @@ mysqli_close($conn);
                         <label for="lname">Preces kategorija :</label><br>
                         <input class="choice-input" list="choice" name="category" placeholder="Izvēle"/><br>
                         <datalist id="choice">
-                            <option value="dators">
-                            <option value="monitors">
-                            <option value="klaviatura">
-                            <option value="peles">
-                            <option value="datoru aksesuars">
-                            <option value="component">
+                            <option value="Dators">
+                            <option value="Monitors">
+                            <option value="Klaviatura">
+                            <option value="Peles">
+                            <option value="Datoru aksesuars">
+                            <option value="Datora komponents">
                         </datalist>
                     </div>
                     <div>

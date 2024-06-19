@@ -2,7 +2,6 @@
 
 $db = mysqli_connect('localhost', 'root', '', 'desktopshop');
 
-
 $id=$_GET['user_id'];
 $sql = "SELECT * FROM users WHERE user_id='$id'";
 
@@ -24,7 +23,6 @@ if (isset($_POST['edit_profile'])) {
     }
     header("Location: Profile.php");
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -64,7 +62,7 @@ if (isset($_POST['edit_profile'])) {
                     </div>
                     <div class="edit-button-container">
                         <button class="edit_button"><a href="Profile.php">Cancel</a></button>
-                        <button type="submit" class="edit_button" name="edit_profile">Edit Product</button>
+                        <button type="submit" class="edit_button" name="edit_profile">Edit Profile</button>
                     </div>
                 </form>
             </div>

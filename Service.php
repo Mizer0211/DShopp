@@ -17,7 +17,7 @@ mysqli_close($conn);
 
 ?>
 <!DOCTYPE html>
-<html lang="lv">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -61,12 +61,15 @@ mysqli_close($conn);
                     <div class="dropdown">
                         <p>Lūdzu, norādiet ar kādu tipu ierīci saistīta jūsu problēma :</p>
                         <input class="choice-input" list="choice" name="category" placeholder="Izvēle"/>
-                     <!--   <datalist id="choice">
-                          <option id="choice-atb" value="Datoru">
-                          <option value="Monitoru">
-                          <option value="Datoru perifēriju">
-                          <option value="Programmatūru">
-                        </datalist>  -->
+                        <datalist id="choice">
+                          <option value="Dators">
+                          <option value="Monitors">
+                          <option value="Pele">
+                          <option value="Klaviatura">
+                          <option value="Austiņas">
+                          <option value="Datoru Komponents">
+                          <option value="Cits">
+                        </datalist>
                     </div>
                 </div>
                 <div class="write-about">
@@ -75,7 +78,7 @@ mysqli_close($conn);
                 </div>
                 <div class="sumbit-div-content">
                     <div class="sumbit-div">
-                        <button type="submit" class="btn" name="request">Nosūtīt pieprasījumu</button>
+                        <button type="submit" class="btn" name="send_workshop_request">Nosūtīt pieprasījumu</button>
                     </div>
                 </div>
             </div>

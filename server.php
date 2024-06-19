@@ -131,41 +131,29 @@ if (isset($_POST['login_user'])) {
 
 
   // Add Service Request To Service Page
-  if (isset($_POST['send_request'])) {
+  if (isset($_POST['send_workshop_request'])) {
 
     $username = mysqli_real_escape_string($db, $_POST['user_name']);
     $useremail = mysqli_real_escape_string($db, $_POST['user_email']);
-    $productcategory = mysqli_real_escape_string($db, $_POST['product_category']);
+    $category = mysqli_real_escape_string($db, $_POST['category']);
     $problemdescription = mysqli_real_escape_string($db, $_POST['problem_description']);
   
 
     if (empty($username)) { array_push($errors, "Name is required"); }
     if (empty($useremail)) { array_push($errors, "Email is required"); }
-    if (empty($productcategory)) { array_push($errors, "Category is required"); }
-    if (empty($problemdescription)) { array_push($errors, "Problem Description is required"); }
+    if (empty($category)) { array_push($errors, "Category is required"); }
+    if (empty($problemdescription)) { array_push($errors, "Description is required"); }
 
     if (count($errors) == 0) {
-      $useremail =strtolower($useremail);
-      $query = "INSERT INTO service (user_name, user_email, product_category, problem_description)
-      VALUES('$username', '$useremail', '$productcategory', '$problemdescription')";
+      $category =strtolower($category);
+      $query = "INSERT INTO workshop (user_name, user_email, product_category, problem_description) 
+      VALUES('$username', '$useremail', '$category', '$problemdescription')";
       mysqli_query($db, $query);
       $_SESSION['user_name'] = $username;
       $_SESSION['user_email'] = $useremail;
-      $_SESSION['product_category'] = $productcategory;
+      $_SESSION['category'] = $specification;
       $_SESSION['problem_description'] = $problemdescription;
     }
     header("Location: Service.php");
   }
-
-
-  //search function code
-  $query = mysqli_query($db, "SELECT * FROM product");
-
-  if (isset($_POST['submit_search_text'])){
-    $search = $_POST['search'];
-    $query = mysqli_query($db, "SELECT * FROM product WHERE title LIKE '%$search%' OR specification LIKE '%$search%'");
-    while($row = mysqli_fetch_assoc($query)) echo "<h1>" .$row['title']."</h1><p>".$row['tetxt']."</p><br>";
-    
-  }
-
 ?>

@@ -36,7 +36,7 @@ if (mysqli_num_rows($results) > 0) {
                     <h4>'.$row['specification'].'</h4>
                 </div>
                 <div class="action">
-                    <a class="product_price">'.$row['price'].' €</a>
+                    <a class="product_price">'.$row['price'].' €</a><br>
                     <button class="show-more-about_product"><a href="Headphone.php?id='.$row['product_id'].'">Show More</a></button>
                     <button class="add-to-cart"><a href="AddToCart.php?id='.$row['product_id'].'">Add To Cart</a></button>
                 </div>
@@ -55,7 +55,7 @@ mysqli_close($conn);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style/pproductstyle.css" rel="stylesheet" type="text/css">
+    <link href="style/productstyle.css" rel="stylesheet" type="text/css">
     <link rel="icon" type="image/x-icon" href="/foto/icon/Icon.ico">
     <title>Headphones</title>
 </head>

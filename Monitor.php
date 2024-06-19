@@ -43,7 +43,6 @@ $result = mysqli_query($db, $sql)->fetch_assoc();
     </div>
 
     <div>
-
         <div class="mouse-content">
 
             <div class="mouse-slides-container">
@@ -130,15 +129,15 @@ $result = mysqli_query($db, $sql)->fetch_assoc();
                                     </tr>
                                     <tr>
                                         <td class="talbe-cell">Preces veids</td>
-                                        <td class="talbe-cell"><a class="link-to-page" href="Mouse.php"><?php echo $result['category'];?></a></td>
+                                        <td class="talbe-cell"><a class="link-to-page" href="Monitori.php"><?php echo $result['category'];?></a></td>
                                     </tr>
                                     <tr>
                                         <td class="talbe-cell">Zīmols</td>
-                                        <td class="talbe-cell">HyperX</td>
+                                        <td class="talbe-cell">Samsung</td>
                                     </tr>
                                     <tr>
                                         <td class="talbe-cell">Modelis</td>
-                                        <td class="talbe-cell">Pulsefire Dart Wireless</td>
+                                        <td class="talbe-cell"><?php echo $result['title'];?></td>
                                     </tr>
                                 </div>
 
@@ -147,29 +146,37 @@ $result = mysqli_query($db, $sql)->fetch_assoc();
                         <div class="block-second-tables">
                             <table class="mouse-feature-table">
                                 <tr>
-                                    <td colspan="2" class="table-header" class="talbe-cell">Savienojumi un barošana</td> 
+                                    <td colspan="2" class="table-header" class="talbe-cell">Ekrāns</td> 
                                 </tr>
                                 <tr>
-                                    <td class="talbe-cell">Peles savienojuma veids</td>
-                                    <td class="talbe-cell">	Bezvadu optiskā</td>
+                                    <td class="talbe-cell">Ekrāna tips</td>
+                                    <td class="talbe-cell">Led</td>
                                 </tr>
                                 <tr>
-                                    <td class="talbe-cell">Savienojuma tips</td>
-                                    <td class="talbe-cell">Bez vadiem pie USB</td>
+                                    <td class="talbe-cell">Ekrāna izmērs</td>
+                                    <td class="talbe-cell">24"</td>
                                 </tr>
                                 <tr>
-                                    <td class="talbe-cell">Vada garums</td>
-                                    <td class="talbe-cell">1.8 m</td>
+                                    <td class="talbe-cell">Izšķirtspēja</td>
+                                    <td class="talbe-cell">1920 x 1080</td>
+                                </tr>
+                                <tr>
+                                    <td class="talbe-cell">Panelis</td>
+                                    <td class="talbe-cell">VA</td>
                                 </tr>
                             </table>
         
                             <table class="mouse-feature-table">
                                 <tr>
-                                    <td colspan="2" class="table-header" class="talbe-cell">Sensors</td> 
+                                    <td colspan="2" class="table-header" class="talbe-cell">Savienojumi</td> 
                                 </tr>
                                 <tr>
-                                    <td class="talbe-cell">Jutīgums (DPI)</td>
-                                    <td class="talbe-cell">400 - 3200</td>
+                                    <td class="talbe-cell">HDMI</td>
+                                    <td class="talbe-cell">Ir</td>
+                                </tr>
+                                <tr>
+                                    <td class="talbe-cell">DisplayPort</td>
+                                    <td class="talbe-cell">Ir</td>
                                 </tr>
                             </table>
         
@@ -186,7 +193,7 @@ $result = mysqli_query($db, $sql)->fetch_assoc();
                                     <td class="talbe-cell">24 mēneši</td>
                                 </tr>
                                 <tr>
-                                    <td class="talbe-cell">Ergonomisks dizains</td>
+                                    <td class="talbe-cell">Rotācija</td>
                                     <td class="talbe-cell">Jā</td>
                                 </tr>
                             </table>
